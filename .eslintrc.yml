@@ -201,7 +201,7 @@ rules:
   no-unused-expressions: error
   no-unused-vars:
     - error
-    - argsIgnorePattern: "^_"
+    - argsIgnorePattern: '^_'
   no-use-before-define: 'off'
   no-useless-call: error
   no-useless-computed-key: error

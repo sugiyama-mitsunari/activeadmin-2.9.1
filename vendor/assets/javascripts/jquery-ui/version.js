@@ -1,17 +1,20 @@
-( function( factory ) {
-	if ( typeof define === "function" && define.amd ) {
+(function (factory) {
+	"use strict";
+
+	if (typeof define === "function" && define.amd) {
 
 		// AMD. Register as an anonymous module.
-		define( [ "jquery" ], factory );
+		define(["jquery"], factory);
 	} else {
 
 		// Browser globals
-		factory( jQuery );
+		factory(jQuery);
 	}
-} ( function( $ ) {
+})(function ($) {
+	"use strict";
 
-$.ui = $.ui || {};
+	$.ui = $.ui || {};
 
-return $.ui.version = "1.12.1";
+	return $.ui.version = "1.13.2";
 
-} ) );
+});

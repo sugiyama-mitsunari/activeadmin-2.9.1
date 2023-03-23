@@ -1,6 +1,6 @@
-//= require jquery-ui/version
-
 ( function( factory ) {
+	"use strict";
+
 	if ( typeof define === "function" && define.amd ) {
 
 		// AMD. Register as an anonymous module.
@@ -10,7 +10,9 @@
 		// Browser globals
 		factory( jQuery );
 	}
-} ( function( $ ) {
+} )( function( $ ) {
+"use strict";
+
 return $.ui.safeBlur = function( element ) {
 
 	// Support: IE9 - 10 only
@@ -20,4 +22,4 @@ return $.ui.safeBlur = function( element ) {
 	}
 };
 
-} ) );
+} );

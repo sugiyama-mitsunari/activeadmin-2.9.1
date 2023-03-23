@@ -1,10 +1,8 @@
-//= require jquery-ui/version
-
 /*!
- * jQuery UI Disable Selection 1.12.1
+ * jQuery UI Disable Selection 1.13.2
  * http://jqueryui.com
  *
- * Copyright jQuery Foundation and other contributors
+ * Copyright OpenJS Foundation and other contributors
  * Released under the MIT license.
  * http://jquery.org/license
  */
@@ -15,34 +13,37 @@
 //>>docs: http://api.jqueryui.com/disableSelection/
 
 // This file is deprecated
-( function( factory ) {
-	if ( typeof define === "function" && define.amd ) {
+(function (factory) {
+	"use strict";
+
+	if (typeof define === "function" && define.amd) {
 
 		// AMD. Register as an anonymous module.
-		define( [ "jquery", "./version" ], factory );
+		define(["jquery", "./version"], factory);
 	} else {
 
 		// Browser globals
-		factory( jQuery );
+		factory(jQuery);
 	}
-} ( function( $ ) {
+})(function ($) {
+	"use strict";
 
-return $.fn.extend( {
-	disableSelection: ( function() {
-		var eventType = "onselectstart" in document.createElement( "div" ) ?
-			"selectstart" :
-			"mousedown";
+	return $.fn.extend({
+		disableSelection: (function () {
+			var eventType = "onselectstart" in document.createElement("div") ?
+				"selectstart" :
+				"mousedown";
 
-		return function() {
-			return this.on( eventType + ".ui-disableSelection", function( event ) {
-				event.preventDefault();
-			} );
-		};
-	} )(),
+			return function () {
+				return this.on(eventType + ".ui-disableSelection", function (event) {
+					event.preventDefault();
+				});
+			};
+		})(),
 
-	enableSelection: function() {
-		return this.off( ".ui-disableSelection" );
-	}
-} );
+		enableSelection: function () {
+			return this.off(".ui-disableSelection");
+		}
+	});
 
-} ) );
+});
