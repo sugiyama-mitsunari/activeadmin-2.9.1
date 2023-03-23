@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-## 2.9.0 [☰](https://github.com/activeadmin/activeadmin/compare/v2.8.1..v2.9.0)
+## 2.9.1 [☰](https://github.com/activeadmin/activeadmin/compare/v2.8.1..v2.9.0)
 
 ### Enhancements
 
